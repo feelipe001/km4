@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Comunidade KM4 | WhatsApp</title>
+<title>Comunidade KM4 | Barra Mansa - RJ</title>
 
-<meta name="description" content="Comunidade do KM4 no WhatsApp: grupo de Compra e Venda e grupo de Avisos e Informações do bairro.">
+<meta name="description" content="Entre para a comunidade do KM4 no WhatsApp. Acompanhe novidades, informações e assuntos do bairro, além do grupo de Compra e Venda.">
 
 <style>
 
@@ -32,6 +32,10 @@
 
     --bg:#F5F8FC;
     --white:#FFFFFF;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -84,7 +88,7 @@ a{
     align-items:center;
     justify-content:space-between;
 
-    background:rgba(255,255,255,.92);
+    background:rgba(255,255,255,.94);
 
     border:1px solid rgba(7,87,184,.08);
 
@@ -354,7 +358,7 @@ a{
 
 
 /* =========================
-   NOTIFICAÇÕES
+   DESTAQUES
 ========================= */
 
 .notifications{
@@ -367,7 +371,7 @@ a{
 
     border-radius:14px;
 
-    padding:12px 14px;
+    padding:13px 14px;
 
     display:flex;
 
@@ -385,8 +389,8 @@ a{
 
 .notification-icon{
 
-    width:38px;
-    height:38px;
+    width:40px;
+    height:40px;
 
     border-radius:12px;
 
@@ -397,7 +401,7 @@ a{
     align-items:center;
     justify-content:center;
 
-    font-size:18px;
+    font-size:19px;
 
     flex-shrink:0;
 }
@@ -406,14 +410,14 @@ a{
 
     font-size:12px;
 
-    line-height:1.35;
+    line-height:1.4;
 }
 
 .notification-text strong{
 
     display:block;
 
-    font-size:12px;
+    font-size:13px;
 
     margin-bottom:2px;
 
@@ -515,6 +519,15 @@ a{
     border:1px solid #E7EEF7;
 
     background:#F9FBFE;
+
+    transition:.2s;
+}
+
+.group:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 8px 22px rgba(6,59,122,.06);
 }
 
 .group-header{
@@ -561,40 +574,6 @@ a{
     font-size:13px;
 
     line-height:1.55;
-}
-
-
-/* =========================
-   AVISO DO GRUPO FECHADO
-========================= */
-
-.closed-info{
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:9px;
-
-    margin-top:12px;
-
-    padding:11px 12px;
-
-    background:#EEF5FF;
-
-    border:1px solid #D8E8FA;
-
-    border-radius:12px;
-
-    color:#315A87;
-
-    font-size:11px;
-
-    line-height:1.45;
-}
-
-.closed-info strong{
-    color:#0757B8;
 }
 
 
@@ -813,6 +792,10 @@ footer strong{
         font-size:23px;
     }
 
+    .main-cta{
+        font-size:14px;
+    }
+
 }
 
 </style>
@@ -880,9 +863,9 @@ footer strong{
 
         <h1>
 
-            O KM4 tem um espaço
+            Tudo o que acontece no KM4,
             <span>
-                para você ficar por dentro.
+                em um só lugar.
             </span>
 
         </h1>
@@ -890,9 +873,9 @@ footer strong{
 
         <p>
 
-            Uma comunidade no WhatsApp com um grupo
-            de Compra e Venda e outro grupo exclusivo
-            para Avisos e Informações do bairro.
+            Entre para a comunidade do KM4 no WhatsApp
+            e acompanhe novidades, informações e assuntos
+            do bairro, além do grupo de Compra e Venda.
 
         </p>
 
@@ -909,7 +892,9 @@ footer strong{
         <div class="video-card">
 
             <!--
-                COLOQUE O ID DO SEU VÍDEO DO YOUTUBE AQUI
+                COLOQUE AQUI O ID DO SEU VÍDEO DO YOUTUBE
+                Exemplo:
+                https://www.youtube.com/embed/ABC123
             -->
 
             <iframe
@@ -931,14 +916,14 @@ footer strong{
 
 
     <!-- =====================
-         CTA WHATSAPP
+         CTA PRINCIPAL
     ====================== -->
 
     <section class="main-cta-area">
 
         <a
 
-            href="SEU_LINK_DA_COMUNIDADE"
+            href="https://chat.whatsapp.com/JEgOJAC6yG6LgoIfjeVRGt"
 
             target="_blank"
 
@@ -947,9 +932,7 @@ footer strong{
             class="main-cta">
 
             <span class="whatsapp-icon">
-
                 ➤
-
             </span>
 
             ENTRAR NA COMUNIDADE DO KM4
@@ -977,45 +960,18 @@ footer strong{
         <div class="notification">
 
             <div class="notification-icon">
-
-                🛒
-
-            </div>
-
-
-            <div class="notification-text">
-
-                <strong>
-                    Compra e Venda no KM4
-                </strong>
-
-                <span>
-                    Anuncie produtos, serviços e oportunidades para os moradores.
-                </span>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="notification">
-
-            <div class="notification-icon">
-
                 📢
-
             </div>
 
 
             <div class="notification-text">
 
                 <strong>
-                    Avisos e Informações
+                    Novidades do KM4
                 </strong>
 
                 <span>
-                    Receba novidades, avisos, eventos e informações sobre o bairro.
+                    Fique por dentro do que está acontecendo no bairro.
                 </span>
 
             </div>
@@ -1027,20 +983,41 @@ footer strong{
         <div class="notification">
 
             <div class="notification-icon">
-
-                🔒
-
+                🏘️
             </div>
 
 
             <div class="notification-text">
 
                 <strong>
-                    Informação sem excesso de conversa
+                    Assuntos do bairro
                 </strong>
 
                 <span>
-                    O grupo de Avisos e Informações é fechado para mensagens dos participantes.
+                    Acompanhe informações, acontecimentos e novidades da região.
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="notification">
+
+            <div class="notification-icon">
+                🛒
+            </div>
+
+
+            <div class="notification-text">
+
+                <strong>
+                    Compra e Venda
+                </strong>
+
+                <span>
+                    Encontre, anuncie e divulgue produtos e serviços no KM4.
                 </span>
 
             </div>
@@ -1062,23 +1039,21 @@ footer strong{
         <div class="community-top">
 
             <div class="community-icon">
-
                 🏘️
-
             </div>
 
 
             <h2>
 
-                Dois grupos. Duas finalidades.
+                Dois grupos para acompanhar o KM4
 
             </h2>
 
 
             <p class="community-description">
 
-                A comunidade do KM4 foi organizada para
-                deixar cada assunto no seu devido lugar.
+                Um espaço para ficar por dentro das novidades
+                do bairro e outro para compra e venda.
 
             </p>
 
@@ -1086,16 +1061,51 @@ footer strong{
 
 
 
-        <!-- COMPRA E VENDA -->
+        <!-- =====================
+             GRUPO DE NOVIDADES
+        ====================== -->
 
         <div class="group">
 
             <div class="group-header">
 
                 <div class="group-icon">
+                    📢
+                </div>
 
+
+                <h3>
+
+                    Novidades e Assuntos do Bairro
+
+                </h3>
+
+            </div>
+
+
+            <p>
+
+                Fique por dentro do que está acontecendo
+                no KM4. Novidades, avisos, eventos,
+                informações e assuntos relacionados
+                ao nosso bairro.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =====================
+             GRUPO COMPRA E VENDA
+        ====================== -->
+
+        <div class="group">
+
+            <div class="group-header">
+
+                <div class="group-icon">
                     🛒
-
                 </div>
 
 
@@ -1110,68 +1120,12 @@ footer strong{
 
             <p>
 
-                Um espaço para os moradores anunciarem
-                produtos, serviços e oportunidades.
-                Está vendendo alguma coisa ou procurando
-                algo? Esse é o grupo certo.
+                Quer vender alguma coisa? Está procurando
+                um produto ou serviço? Encontre anúncios
+                e oportunidades de moradores e comércios
+                da região.
 
             </p>
-
-        </div>
-
-
-
-        <!-- AVISOS E INFORMAÇÕES -->
-
-        <div class="group">
-
-            <div class="group-header">
-
-                <div class="group-icon">
-
-                    📢
-
-                </div>
-
-
-                <h3>
-
-                    Avisos e Informações
-
-                </h3>
-
-            </div>
-
-
-            <p>
-
-                Um grupo fechado para receber informações
-                sobre o KM4. Avisos, novidades, eventos,
-                acontecimentos e tudo que for importante
-                para os moradores saberem.
-
-            </p>
-
-
-            <div class="closed-info">
-
-                <span>🔒</span>
-
-                <div>
-
-                    <strong>
-                        Grupo fechado
-                    </strong>
-
-                    <br>
-
-                    O espaço é utilizado para publicação
-                    de informações. Os participantes entram
-                    para receber os avisos.
-
-                </div>
-
-            </div>
 
         </div>
 
@@ -1189,7 +1143,7 @@ footer strong{
 
         <h2 class="section-title">
 
-            Por que fazer parte?
+            Por que entrar na comunidade?
 
         </h2>
 
@@ -1204,11 +1158,11 @@ footer strong{
             <div>
 
                 <strong>
-                    Saiba o que acontece no KM4
+                    Fique por dentro do KM4
                 </strong>
 
                 <span>
-                    Receba informações e novidades sobre o bairro.
+                    Acompanhe novidades, informações e acontecimentos do bairro.
                 </span>
 
             </div>
@@ -1226,11 +1180,11 @@ footer strong{
             <div>
 
                 <strong>
-                    Encontre produtos e serviços
+                    Saiba o que está acontecendo
                 </strong>
 
                 <span>
-                    Acompanhe anúncios de moradores e comércios da região.
+                    Receba informações sobre eventos, avisos e assuntos importantes da região.
                 </span>
 
             </div>
@@ -1248,11 +1202,11 @@ footer strong{
             <div>
 
                 <strong>
-                    Receba avisos importantes
+                    Compre e venda no bairro
                 </strong>
 
                 <span>
-                    Fique informado sobre eventos, novidades e acontecimentos do bairro.
+                    Encontre produtos e serviços ou divulgue o que você tem para vender.
                 </span>
 
             </div>
@@ -1274,7 +1228,7 @@ footer strong{
                 </strong>
 
                 <span>
-                    Acesse os dois grupos diretamente pelo WhatsApp.
+                    Acompanhe a comunidade diretamente pelo seu celular.
                 </span>
 
             </div>
@@ -1298,22 +1252,22 @@ footer strong{
 
             <h2>
 
-                Entre na comunidade do KM4
+                Faça parte da comunidade do KM4
 
             </h2>
 
 
             <p>
 
-                Tenha acesso ao grupo de Compra e Venda
-                e ao grupo de Avisos e Informações do bairro.
+                Entre no WhatsApp e acompanhe as novidades
+                do bairro e o grupo de Compra e Venda.
 
             </p>
 
 
             <a
 
-                href="SEU_LINK_DA_COMUNIDADE"
+                href="https://chat.whatsapp.com/JEgOJAC6yG6LgoIfjeVRGt"
 
                 target="_blank"
 
@@ -1344,8 +1298,10 @@ footer strong{
 
         <br>
 
-        Compra e Venda • Avisos e Informações
+        Novidades e Assuntos do Bairro • Compra e Venda
+
         <br>
+
         KM4 • Barra Mansa - RJ
 
     </footer>

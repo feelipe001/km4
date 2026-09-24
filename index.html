@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Comunidade KM4 | WhatsApp</title>
+
+<meta name="description" content="Entre para a comunidade do KM4 no WhatsApp. Compra e venda, assuntos do bairro, avisos, novidades e muito mais.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --green:#16a34a;
+    --green-dark:#087f35;
+    --green-light:#dcfce7;
+    --dark:#101814;
+    --text:#202824;
+    --gray:#66706a;
+    --bg:#f5f7f6;
+    --white:#ffffff;
+}
+
+body{
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+    background:
+        radial-gradient(
+            circle at top,
+            #e9f8ee 0,
+            #f5f7f6 35%,
+            #f5f7f6 100%
+        );
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:100%;
+    max-width:680px;
+    margin:auto;
+}
+
+/* =========================
+   TOPO
+========================= */
+
+.header{
+    padding:18px 18px 14px;
+    display:flex;
+    justify-content:center;
+}
+
+.header-box{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:rgba(255,255,255,.88);
+    border:1px solid rgba(0,0,0,.05);
+    border-radius:18px;
+    padding:12px 14px;
+    box-shadow:0 8px 30px rgba(0,0,0,.05);
+    backdrop-filter:blur(10px);
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.brand-logo{
+    width:43px;
+    height:43px;
+    border-radius:13px;
+    background:linear-gradient(
+        135deg,
+        #20c463,
+        #0d8e3e
+    );
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+    font-weight:900;
+    box-shadow:0 5px 15px rgba(22,163,74,.25);
+}
+
+.brand-text strong{
+    display:block;
+    font-size:15px;
+    font-weight:900;
+}
+
+.brand-text span{
+    font-size:11px;
+    color:#7a827e;
+}
+
+.whatsapp-badge{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    color:#0a8d3c;
+    background:#e9f9ee;
+    padding:8px 10px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:800;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    padding:25px 18px 15px;
+    text-align:center;
+}
+
+.eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    background:var(--green-light);
+    color:#087f35;
+    border-radius:30px;
+    padding:8px 13px;
+    font-size:11px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:.4px;
+    margin-bottom:15px;
+}
+
+.eyebrow-dot{
+    width:7px;
+    height:7px;
+    background:#22c55e;
+    border-radius:50%;
+    box-shadow:0 0 0 5px rgba(34,197,94,.12);
+}
+
+.hero h1{
+    font-size:clamp(29px,7vw,48px);
+    line-height:1.03;
+    letter-spacing:-1.8px;
+    font-weight:950;
+    color:#111914;
+    margin-bottom:14px;
+}
+
+.hero h1 span{
+    color:var(--green);
+}
+
+.hero p{
+    max-width:540px;
+    margin:auto;
+    color:var(--gray);
+    font-size:15px;
+    line-height:1.55;
+}
+
+/* =========================
+   VIDEO
+========================= */
+
+.video-area{
+    padding:15px 12px 5px;
+}
+
+.video-card{
+    background:#000;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:
+        0 18px 50px rgba(0,0,0,.16),
+        0 3px 10px rgba(0,0,0,.08);
+    position:relative;
+}
+
+.video-card iframe{
+    width:100%;
+    aspect-ratio:16/9;
+    display:block;
+    border:0;
+}
+
+/* =========================
+   CTA PRINCIPAL
+========================= */
+
+.main-cta-area{
+    padding:22px 18px 5px;
+}
+
+.main-cta{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    width:100%;
+    background:linear-gradient(
+        135deg,
+        #20c463,
+        #0b923e
+    );
+    color:white;
+    padding:18px 20px;
+    border-radius:16px;
+    font-size:16px;
+    font-weight:950;
+    box-shadow:
+        0 12px 28px rgba(22,163,74,.28);
+    transition:.2s;
+}
+
+.main-cta:hover{
+    transform:translateY(-2px);
+}
+
+.whatsapp-icon{
+    width:25px;
+    height:25px;
+    background:white;
+    color:#16a34a;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:15px;
+}
+
+.cta-note{
+    text-align:center;
+    color:#7b837f;
+    font-size:11px;
+    margin-top:9px;
+}
+
+/* =========================
+   NOTIFICAÇÕES
+========================= */
+
+.notifications{
+    padding:20px 18px 8px;
+}
+
+.notification{
+    background:white;
+    border-radius:14px;
+    padding:12px 14px;
+    display:flex;
+    align-items:center;
+    gap:11px;
+    margin-bottom:9px;
+    box-shadow:0 5px 18px rgba(0,0,0,.05);
+    border:1px solid #edf0ee;
+}
+
+.notification-icon{
+    width:38px;
+    height:38px;
+    border-radius:12px;
+    background:#e9f9ee;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+    flex-shrink:0;
+}
+
+.notification-text{
+    font-size:12px;
+    line-height:1.35;
+}
+
+.notification-text strong{
+    display:block;
+    font-size:12px;
+    margin-bottom:2px;
+}
+
+.notification-text span{
+    color:#737b77;
+}
+
+/* =========================
+   BLOCO COMUNIDADE
+========================= */
+
+.community{
+    margin:20px 12px;
+    background:white;
+    border-radius:24px;
+    padding:28px 19px;
+    box-shadow:0 10px 35px rgba(0,0,0,.07);
+    border:1px solid #e9eeeb;
+}
+
+.community-top{
+    text-align:center;
+    margin-bottom:24px;
+}
+
+.community-icon{
+    width:62px;
+    height:62px;
+    margin:0 auto 13px;
+    border-radius:19px;
+    background:linear-gradient(
+        135deg,
+        #e9f9ee,
+        #d5f5df
+    );
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+}
+
+.community h2{
+    font-size:26px;
+    letter-spacing:-.7px;
+    font-weight:950;
+    margin-bottom:8px;
+}
+
+.community-description{
+    color:#707873;
+    font-size:14px;
+    line-height:1.5;
+}
+
+/* =========================
+   GRUPOS
+========================= */
+
+.group{
+    border-radius:18px;
+    padding:18px;
+    margin-top:12px;
+    border:1px solid #edf0ee;
+    background:#fafcfb;
+}
+
+.group-header{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:9px;
+}
+
+.group-icon{
+    width:46px;
+    height:46px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:23px;
+    background:#e9f9ee;
+}
+
+.group h3{
+    font-size:17px;
+    font-weight:900;
+}
+
+.group p{
+    color:#6c756f;
+    font-size:13px;
+    line-height:1.55;
+}
+
+/* =========================
+   BENEFÍCIOS
+========================= */
+
+.benefits{
+    padding:15px 18px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:24px;
+    font-weight:950;
+    letter-spacing:-.6px;
+    margin-bottom:17px;
+}
+
+.benefit{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:14px;
+}
+
+.check{
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    background:#dcfce7;
+    color:#0a8d3c;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+    font-weight:900;
+    flex-shrink:0;
+}
+
+.benefit strong{
+    display:block;
+    font-size:14px;
+    margin-bottom:2px;
+}
+
+.benefit span{
+    display:block;
+    color:#707873;
+    font-size:12px;
+    line-height:1.4;
+}
+
+/* =========================
+   CTA FINAL
+========================= */
+
+.final{
+    padding:20px 18px 10px;
+}
+
+.final-box{
+    background:
+        linear-gradient(
+            135deg,
+            #0c8f3c,
+            #075f2b
+        );
+    border-radius:24px;
+    padding:30px 20px;
+    text-align:center;
+    color:white;
+    box-shadow:
+        0 18px 40px rgba(7,95,43,.25);
+}
+
+.final-box h2{
+    font-size:27px;
+    line-height:1.1;
+    font-weight:950;
+    letter-spacing:-.8px;
+    margin-bottom:9px;
+}
+
+.final-box p{
+    color:#d8f4e1;
+    font-size:13px;
+    line-height:1.5;
+    margin-bottom:20px;
+}
+
+.final-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    background:white;
+    color:#087f35;
+    border-radius:14px;
+    padding:16px;
+    font-size:15px;
+    font-weight:950;
+    transition:.2s;
+}
+
+.final-button:hover{
+    transform:translateY(-2px);
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer{
+    text-align:center;
+    padding:25px 18px 35px;
+    color:#8b938e;
+    font-size:11px;
+    line-height:1.5;
+}
+
+footer strong{
+    color:#59635d;
+}
+
+/* =========================
+   ANIMAÇÃO
+========================= */
+
+@keyframes pulse{
+    0%{
+        box-shadow:0 0 0 0 rgba(34,197,94,.35);
+    }
+    70%{
+        box-shadow:0 0 0 9px rgba(34,197,94,0);
+    }
+    100%{
+        box-shadow:0 0 0 0 rgba(34,197,94,0);
+    }
+}
+
+.whatsapp-badge{
+    animation:pulse 2.5s infinite;
+}
+
+@media(max-width:480px){
+
+    .hero{
+        padding-top:20px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .community h2{
+        font-size:23px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <!-- =====================
+         CABEÇALHO
+    ====================== -->
+
+    <header class="header">
+
+        <div class="header-box">
+
+            <div class="brand">
+
+                <div class="brand-logo">
+                    KM4
+                </div>
+
+                <div class="brand-text">
+                    <strong>@bairro.km4</strong>
+                    <span>Comunidade do bairro</span>
+                </div>
+
+            </div>
+
+            <div class="whatsapp-badge">
+                🟢 WhatsApp
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================
+         HERO
+    ====================== -->
+
+    <section class="hero">
+
+        <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Comunidade do KM4
+        </div>
+
+        <h1>
+            O KM4 agora tem um espaço
+            <span>para todo mundo.</span>
+        </h1>
+
+        <p>
+            Um espaço no WhatsApp para os moradores
+            se conectarem, compartilharem informações,
+            comprarem, venderem e acompanharem
+            o que acontece no nosso bairro.
+        </p>
+
+    </section>
+
+
+    <!-- =====================
+         VSL
+    ====================== -->
+
+    <section class="video-area">
+
+        <div class="video-card">
+
+            <!-- TROQUE SEU_VIDEO PELO ID DO YOUTUBE -->
+
+            <iframe
+                src="https://www.youtube.com/embed/SEU_VIDEO"
+                title="Comunidade do KM4"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================
+         CTA PRINCIPAL
+    ====================== -->
+
+    <section class="main-cta-area">
+
+        <a
+            href="SEU_LINK_DA_COMUNIDADE"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="main-cta">
+
+            <span class="whatsapp-icon">➤</span>
+
+            ENTRAR NA COMUNIDADE DO KM4
+
+        </a>
+
+        <div class="cta-note">
+            É gratuito e você pode participar dos grupos da comunidade.
+        </div>
+
+    </section>
+
+
+    <!-- =====================
+         NOTIFICAÇÕES
+    ====================== -->
+
+    <section class="notifications">
+
+        <div class="notification">
+
+            <div class="notification-icon">
+                🛒
+            </div>
+
+            <div class="notification-text">
+
+                <strong>Compra e venda no bairro</strong>
+
+                <span>
+                    Encontre ou anuncie produtos e serviços.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="notification">
+
+            <div class="notification-icon">
+                📢
+            </div>
+
+            <div class="notification-text">
+
+                <strong>Fique por dentro do KM4</strong>
+
+                <span>
+                    Avisos, novidades, eventos e assuntos do bairro.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="notification">
+
+            <div class="notification-icon">
+                🤝
+            </div>
+
+            <div class="notification-text">
+
+                <strong>Mais moradores conectados</strong>
+
+                <span>
+                    Um espaço para aproximar quem vive no KM4.
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================
+         COMUNIDADE
+    ====================== -->
+
+    <section class="community">
+
+        <div class="community-top">
+
+            <div class="community-icon">
+                🏘️
+            </div>
+
+            <h2>
+                O que você encontra aqui?
+            </h2>
+
+            <p class="community-description">
+                A comunidade foi criada para reunir
+                diferentes assuntos do dia a dia
+                dos moradores do KM4.
+            </p>
+
+        </div>
+
+
+        <!-- COMPRA E VENDA -->
+
+        <div class="group">
+
+            <div class="group-header">
+
+                <div class="group-icon">
+                    🛒
+                </div>
+
+                <h3>
+                    Compra e Venda
+                </h3>
+
+            </div>
+
+            <p>
+                Tem algo para vender? Está procurando
+                alguma coisa? Quer divulgar um serviço?
+                Esse é o espaço para moradores anunciarem,
+                comprarem, venderem e trocarem.
+            </p>
+
+        </div>
+
+
+        <!-- ASSUNTOS DO BAIRRO -->
+
+        <div class="group">
+
+            <div class="group-header">
+
+                <div class="group-icon">
+                    📢
+                </div>
+
+                <h3>
+                    Assuntos do Bairro
+                </h3>
+
+            </div>
+
+            <p>
+                Notícias, avisos, problemas, sugestões,
+                eventos e outras informações importantes
+                para quem mora no KM4.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================
+         BENEFÍCIOS
+    ====================== -->
+
+    <section class="benefits">
+
+        <h2 class="section-title">
+            Por que entrar?
+        </h2>
+
+
+        <div class="benefit">
+
+            <div class="check">
+                ✓
+            </div>
+
+            <div>
+
+                <strong>
+                    Saiba o que acontece no bairro
+                </strong>
+
+                <span>
+                    Acompanhe informações e novidades
+                    compartilhadas pelos moradores.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="check">
+                ✓
+            </div>
+
+            <div>
+
+                <strong>
+                    Compre e venda perto de você
+                </strong>
+
+                <span>
+                    Divulgue produtos e serviços para
+                    pessoas da região.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="check">
+                ✓
+            </div>
+
+            <div>
+
+                <strong>
+                    Participe da comunidade
+                </strong>
+
+                <span>
+                    Compartilhe informações e ajude a
+                    movimentar o nosso bairro.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="check">
+                ✓
+            </div>
+
+            <div>
+
+                <strong>
+                    Tudo pelo WhatsApp
+                </strong>
+
+                <span>
+                    Você entra pelo WhatsApp e participa
+                    dos grupos da comunidade.
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================
+         CTA FINAL
+    ====================== -->
+
+    <section class="final">
+
+        <div class="final-box">
+
+            <h2>
+                Faça parte da comunidade do KM4
+            </h2>
+
+            <p>
+                Entre gratuitamente e fique mais perto
+                do que acontece no nosso bairro.
+            </p>
+
+            <a
+                href="SEU_LINK_DA_COMUNIDADE"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="final-button">
+
+                🟢 ENTRAR NO WHATSAPP
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================
+         RODAPÉ
+    ====================== -->
+
+    <footer>
+
+        <strong>@bairro.km4</strong><br>
+
+        Comunidade do KM4 • Barra Mansa - RJ
+
+    </footer>
+
+
+</div>
+
+</body>
+</html>

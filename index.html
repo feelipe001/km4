@@ -17,14 +17,21 @@
 }
 
 :root{
-    --green:#16a34a;
-    --green-dark:#087f35;
-    --green-light:#dcfce7;
-    --dark:#101814;
-    --text:#202824;
-    --gray:#66706a;
-    --bg:#f5f7f6;
-    --white:#ffffff;
+    --blue:#0757B8;
+    --blue-dark:#063B7A;
+    --blue-light:#EAF3FF;
+    --blue-soft:#F4F8FD;
+
+    --whatsapp:#25D366;
+    --whatsapp-dark:#128C7E;
+    --whatsapp-light:#E9F9EF;
+
+    --dark:#111827;
+    --text:#202936;
+    --gray:#687383;
+
+    --bg:#F5F8FC;
+    --white:#FFFFFF;
 }
 
 body{
@@ -36,13 +43,15 @@ body{
         Roboto,
         Arial,
         sans-serif;
+
     background:
         radial-gradient(
             circle at top,
-            #e9f8ee 0,
-            #f5f7f6 35%,
-            #f5f7f6 100%
+            #EAF3FF 0,
+            #F5F8FC 38%,
+            #F5F8FC 100%
         );
+
     color:var(--text);
     overflow-x:hidden;
 }
@@ -57,8 +66,9 @@ a{
     margin:auto;
 }
 
+
 /* =========================
-   TOPO
+   CABEÇALHO
 ========================= */
 
 .header{
@@ -69,14 +79,22 @@ a{
 
 .header-box{
     width:100%;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
-    background:rgba(255,255,255,.88);
-    border:1px solid rgba(0,0,0,.05);
+
+    background:rgba(255,255,255,.92);
+
+    border:1px solid rgba(7,87,184,.08);
+
     border-radius:18px;
+
     padding:12px 14px;
-    box-shadow:0 8px 30px rgba(0,0,0,.05);
+
+    box-shadow:
+        0 8px 30px rgba(6,59,122,.07);
+
     backdrop-filter:blur(10px);
 }
 
@@ -89,43 +107,63 @@ a{
 .brand-logo{
     width:43px;
     height:43px;
+
     border-radius:13px;
-    background:linear-gradient(
-        135deg,
-        #20c463,
-        #0d8e3e
-    );
+
+    background:
+        linear-gradient(
+            135deg,
+            #0878E8,
+            #063B7A
+        );
+
     color:white;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     font-size:13px;
     font-weight:900;
-    box-shadow:0 5px 15px rgba(22,163,74,.25);
+
+    box-shadow:
+        0 5px 15px rgba(7,87,184,.25);
 }
 
 .brand-text strong{
     display:block;
+
     font-size:15px;
     font-weight:900;
+
+    color:var(--dark);
 }
 
 .brand-text span{
     font-size:11px;
-    color:#7a827e;
+    color:#7A8491;
 }
+
+
+/* WHATSAPP */
 
 .whatsapp-badge{
     display:flex;
     align-items:center;
     gap:6px;
-    color:#0a8d3c;
-    background:#e9f9ee;
+
+    color:#128C7E;
+
+    background:var(--whatsapp-light);
+
     padding:8px 10px;
+
     border-radius:20px;
+
     font-size:11px;
     font-weight:800;
 }
+
 
 /* =========================
    HERO
@@ -138,47 +176,70 @@ a{
 
 .eyebrow{
     display:inline-flex;
+
     align-items:center;
     gap:7px;
-    background:var(--green-light);
-    color:#087f35;
+
+    background:var(--blue-light);
+
+    color:var(--blue);
+
     border-radius:30px;
+
     padding:8px 13px;
+
     font-size:11px;
     font-weight:900;
+
     text-transform:uppercase;
+
     letter-spacing:.4px;
+
     margin-bottom:15px;
 }
 
 .eyebrow-dot{
     width:7px;
     height:7px;
-    background:#22c55e;
+
+    background:var(--blue);
+
     border-radius:50%;
-    box-shadow:0 0 0 5px rgba(34,197,94,.12);
+
+    box-shadow:
+        0 0 0 5px rgba(7,87,184,.12);
 }
 
 .hero h1{
     font-size:clamp(29px,7vw,48px);
+
     line-height:1.03;
+
     letter-spacing:-1.8px;
+
     font-weight:950;
+
     color:#111914;
+
     margin-bottom:14px;
 }
 
 .hero h1 span{
-    color:var(--green);
+    color:var(--blue);
 }
 
 .hero p{
     max-width:540px;
+
     margin:auto;
+
     color:var(--gray);
+
     font-size:15px;
+
     line-height:1.55;
 }
+
 
 /* =========================
    VIDEO
@@ -190,23 +251,31 @@ a{
 
 .video-card{
     background:#000;
+
     border-radius:20px;
+
     overflow:hidden;
+
     box-shadow:
         0 18px 50px rgba(0,0,0,.16),
         0 3px 10px rgba(0,0,0,.08);
+
     position:relative;
 }
 
 .video-card iframe{
     width:100%;
+
     aspect-ratio:16/9;
+
     display:block;
+
     border:0;
 }
 
+
 /* =========================
-   CTA PRINCIPAL
+   CTA WHATSAPP
 ========================= */
 
 .main-cta-area{
@@ -214,23 +283,37 @@ a{
 }
 
 .main-cta{
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     gap:10px;
+
     width:100%;
-    background:linear-gradient(
-        135deg,
-        #20c463,
-        #0b923e
-    );
+
+    background:
+        linear-gradient(
+            135deg,
+            #25D366,
+            #16B954
+        );
+
     color:white;
+
     padding:18px 20px;
+
     border-radius:16px;
+
     font-size:16px;
+
     font-weight:950;
+
     box-shadow:
-        0 12px 28px rgba(22,163,74,.28);
+        0 12px 28px rgba(37,211,102,.28);
+
     transition:.2s;
 }
 
@@ -239,23 +322,36 @@ a{
 }
 
 .whatsapp-icon{
-    width:25px;
-    height:25px;
+
+    width:27px;
+    height:27px;
+
     background:white;
-    color:#16a34a;
+
+    color:#16B954;
+
     border-radius:50%;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     font-size:15px;
 }
 
 .cta-note{
+
     text-align:center;
-    color:#7b837f;
+
+    color:#7B858F;
+
     font-size:11px;
+
     margin-top:9px;
 }
+
 
 /* =========================
    NOTIFICAÇÕES
@@ -266,273 +362,408 @@ a{
 }
 
 .notification{
+
     background:white;
+
     border-radius:14px;
+
     padding:12px 14px;
+
     display:flex;
+
     align-items:center;
+
     gap:11px;
+
     margin-bottom:9px;
-    box-shadow:0 5px 18px rgba(0,0,0,.05);
-    border:1px solid #edf0ee;
+
+    box-shadow:
+        0 5px 18px rgba(6,59,122,.05);
+
+    border:1px solid #E6EDF5;
 }
 
 .notification-icon{
+
     width:38px;
     height:38px;
+
     border-radius:12px;
-    background:#e9f9ee;
+
+    background:var(--blue-light);
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     font-size:18px;
+
     flex-shrink:0;
 }
 
 .notification-text{
+
     font-size:12px;
+
     line-height:1.35;
 }
 
 .notification-text strong{
+
     display:block;
+
     font-size:12px;
+
     margin-bottom:2px;
+
+    color:var(--dark);
 }
 
 .notification-text span{
-    color:#737b77;
+
+    color:#737D88;
 }
 
+
 /* =========================
-   BLOCO COMUNIDADE
+   COMUNIDADE
 ========================= */
 
 .community{
+
     margin:20px 12px;
+
     background:white;
+
     border-radius:24px;
+
     padding:28px 19px;
-    box-shadow:0 10px 35px rgba(0,0,0,.07);
-    border:1px solid #e9eeeb;
+
+    box-shadow:
+        0 10px 35px rgba(6,59,122,.07);
+
+    border:1px solid #E5EDF6;
 }
 
 .community-top{
+
     text-align:center;
+
     margin-bottom:24px;
 }
 
 .community-icon{
+
     width:62px;
     height:62px;
+
     margin:0 auto 13px;
+
     border-radius:19px;
-    background:linear-gradient(
-        135deg,
-        #e9f9ee,
-        #d5f5df
-    );
+
+    background:
+        linear-gradient(
+            135deg,
+            #EAF3FF,
+            #D9EAFE
+        );
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     font-size:30px;
 }
 
 .community h2{
+
     font-size:26px;
+
     letter-spacing:-.7px;
+
     font-weight:950;
+
     margin-bottom:8px;
+
+    color:var(--dark);
 }
 
 .community-description{
-    color:#707873;
+
+    color:#707983;
+
     font-size:14px;
+
     line-height:1.5;
 }
+
 
 /* =========================
    GRUPOS
 ========================= */
 
 .group{
+
     border-radius:18px;
+
     padding:18px;
+
     margin-top:12px;
-    border:1px solid #edf0ee;
-    background:#fafcfb;
+
+    border:1px solid #E7EEF7;
+
+    background:#F9FBFE;
 }
 
 .group-header{
+
     display:flex;
+
     align-items:center;
+
     gap:12px;
+
     margin-bottom:9px;
 }
 
 .group-icon{
+
     width:46px;
     height:46px;
+
     border-radius:14px;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     font-size:23px;
-    background:#e9f9ee;
+
+    background:var(--blue-light);
 }
 
 .group h3{
+
     font-size:17px;
+
     font-weight:900;
+
+    color:var(--dark);
 }
 
 .group p{
-    color:#6c756f;
+
+    color:#6C7580;
+
     font-size:13px;
+
     line-height:1.55;
 }
+
 
 /* =========================
    BENEFÍCIOS
 ========================= */
 
 .benefits{
+
     padding:15px 18px;
 }
 
 .section-title{
+
     text-align:center;
+
     font-size:24px;
+
     font-weight:950;
+
     letter-spacing:-.6px;
+
     margin-bottom:17px;
+
+    color:var(--dark);
 }
 
 .benefit{
+
     display:flex;
+
     align-items:flex-start;
+
     gap:12px;
+
     margin-bottom:14px;
 }
 
 .check{
+
     width:25px;
     height:25px;
+
     border-radius:50%;
-    background:#dcfce7;
-    color:#0a8d3c;
+
+    background:var(--blue-light);
+
+    color:var(--blue);
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     font-size:13px;
+
     font-weight:900;
+
     flex-shrink:0;
 }
 
 .benefit strong{
+
     display:block;
+
     font-size:14px;
+
     margin-bottom:2px;
+
+    color:var(--dark);
 }
 
 .benefit span{
+
     display:block;
-    color:#707873;
+
+    color:#707983;
+
     font-size:12px;
+
     line-height:1.4;
 }
+
 
 /* =========================
    CTA FINAL
 ========================= */
 
 .final{
+
     padding:20px 18px 10px;
 }
 
 .final-box{
+
     background:
         linear-gradient(
             135deg,
-            #0c8f3c,
-            #075f2b
+            #0757B8,
+            #063B7A
         );
+
     border-radius:24px;
+
     padding:30px 20px;
+
     text-align:center;
+
     color:white;
+
     box-shadow:
-        0 18px 40px rgba(7,95,43,.25);
+        0 18px 40px rgba(6,59,122,.25);
 }
 
 .final-box h2{
+
     font-size:27px;
+
     line-height:1.1;
+
     font-weight:950;
+
     letter-spacing:-.8px;
+
     margin-bottom:9px;
 }
 
 .final-box p{
-    color:#d8f4e1;
+
+    color:#DCEBFA;
+
     font-size:13px;
+
     line-height:1.5;
+
     margin-bottom:20px;
 }
 
+
+/* BOTÃO WHATSAPP */
+
 .final-button{
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     gap:9px;
-    background:white;
-    color:#087f35;
+
+    background:var(--whatsapp);
+
+    color:white;
+
     border-radius:14px;
+
     padding:16px;
+
     font-size:15px;
+
     font-weight:950;
+
     transition:.2s;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.16);
 }
 
 .final-button:hover{
+
     transform:translateY(-2px);
+
+    background:#20BE5C;
 }
+
 
 /* =========================
    RODAPÉ
 ========================= */
 
 footer{
+
     text-align:center;
+
     padding:25px 18px 35px;
-    color:#8b938e;
+
+    color:#8B949E;
+
     font-size:11px;
+
     line-height:1.5;
 }
 
 footer strong{
-    color:#59635d;
+
+    color:var(--blue);
 }
+
 
 /* =========================
-   ANIMAÇÃO
+   RESPONSIVO
 ========================= */
-
-@keyframes pulse{
-    0%{
-        box-shadow:0 0 0 0 rgba(34,197,94,.35);
-    }
-    70%{
-        box-shadow:0 0 0 9px rgba(34,197,94,0);
-    }
-    100%{
-        box-shadow:0 0 0 0 rgba(34,197,94,0);
-    }
-}
-
-.whatsapp-badge{
-    animation:pulse 2.5s infinite;
-}
 
 @media(max-width:480px){
 
@@ -574,19 +805,30 @@ footer strong{
                 </div>
 
                 <div class="brand-text">
+
                     <strong>@bairro.km4</strong>
-                    <span>Comunidade do bairro</span>
+
+                    <span>
+                        Comunidade do bairro
+                    </span>
+
                 </div>
 
             </div>
 
+
+            <!-- WHATSAPP -->
+
             <div class="whatsapp-badge">
+
                 🟢 WhatsApp
+
             </div>
 
         </div>
 
     </header>
+
 
 
     <!-- =====================
@@ -596,23 +838,35 @@ footer strong{
     <section class="hero">
 
         <div class="eyebrow">
+
             <span class="eyebrow-dot"></span>
+
             Comunidade do KM4
+
         </div>
 
+
         <h1>
+
             O KM4 agora tem um espaço
-            <span>para todo mundo.</span>
+            <span>
+                para todo mundo.
+            </span>
+
         </h1>
 
+
         <p>
+
             Um espaço no WhatsApp para os moradores
             se conectarem, compartilharem informações,
             comprarem, venderem e acompanharem
             o que acontece no nosso bairro.
+
         </p>
 
     </section>
+
 
 
     <!-- =====================
@@ -623,13 +877,20 @@ footer strong{
 
         <div class="video-card">
 
-            <!-- TROQUE SEU_VIDEO PELO ID DO YOUTUBE -->
+            <!--
+            COLOQUE O ID DO SEU VÍDEO DO YOUTUBE AQUI
+            -->
 
             <iframe
+
                 src="https://www.youtube.com/embed/SEU_VIDEO"
+
                 title="Comunidade do KM4"
+
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+
                 allowfullscreen>
+
             </iframe>
 
         </div>
@@ -637,29 +898,42 @@ footer strong{
     </section>
 
 
+
     <!-- =====================
-         CTA PRINCIPAL
+         CTA WHATSAPP
     ====================== -->
 
     <section class="main-cta-area">
 
         <a
+
             href="SEU_LINK_DA_COMUNIDADE"
+
             target="_blank"
+
             rel="noopener noreferrer"
+
             class="main-cta">
 
-            <span class="whatsapp-icon">➤</span>
+            <span class="whatsapp-icon">
+
+                ➤
+
+            </span>
 
             ENTRAR NA COMUNIDADE DO KM4
 
         </a>
 
+
         <div class="cta-note">
-            É gratuito e você pode participar dos grupos da comunidade.
+
+            Gratuito • Comunidade no WhatsApp
+
         </div>
 
     </section>
+
 
 
     <!-- =====================
@@ -668,15 +942,21 @@ footer strong{
 
     <section class="notifications">
 
+
         <div class="notification">
 
             <div class="notification-icon">
+
                 🛒
+
             </div>
+
 
             <div class="notification-text">
 
-                <strong>Compra e venda no bairro</strong>
+                <strong>
+                    Compra e venda no bairro
+                </strong>
 
                 <span>
                     Encontre ou anuncie produtos e serviços.
@@ -687,15 +967,21 @@ footer strong{
         </div>
 
 
+
         <div class="notification">
 
             <div class="notification-icon">
+
                 📢
+
             </div>
+
 
             <div class="notification-text">
 
-                <strong>Fique por dentro do KM4</strong>
+                <strong>
+                    Fique por dentro do KM4
+                </strong>
 
                 <span>
                     Avisos, novidades, eventos e assuntos do bairro.
@@ -706,15 +992,21 @@ footer strong{
         </div>
 
 
+
         <div class="notification">
 
             <div class="notification-icon">
+
                 🤝
+
             </div>
+
 
             <div class="notification-text">
 
-                <strong>Mais moradores conectados</strong>
+                <strong>
+                    Moradores mais conectados
+                </strong>
 
                 <span>
                     Um espaço para aproximar quem vive no KM4.
@@ -724,7 +1016,9 @@ footer strong{
 
         </div>
 
+
     </section>
+
 
 
     <!-- =====================
@@ -733,23 +1027,33 @@ footer strong{
 
     <section class="community">
 
+
         <div class="community-top">
 
             <div class="community-icon">
+
                 🏘️
+
             </div>
 
+
             <h2>
+
                 O que você encontra aqui?
+
             </h2>
 
+
             <p class="community-description">
+
                 A comunidade foi criada para reunir
                 diferentes assuntos do dia a dia
                 dos moradores do KM4.
+
             </p>
 
         </div>
+
 
 
         <!-- COMPRA E VENDA -->
@@ -759,23 +1063,32 @@ footer strong{
             <div class="group-header">
 
                 <div class="group-icon">
+
                     🛒
+
                 </div>
 
+
                 <h3>
+
                     Compra e Venda
+
                 </h3>
 
             </div>
 
+
             <p>
+
                 Tem algo para vender? Está procurando
                 alguma coisa? Quer divulgar um serviço?
                 Esse é o espaço para moradores anunciarem,
                 comprarem, venderem e trocarem.
+
             </p>
 
         </div>
+
 
 
         <!-- ASSUNTOS DO BAIRRO -->
@@ -785,24 +1098,34 @@ footer strong{
             <div class="group-header">
 
                 <div class="group-icon">
+
                     📢
+
                 </div>
 
+
                 <h3>
+
                     Assuntos do Bairro
+
                 </h3>
 
             </div>
 
+
             <p>
+
                 Notícias, avisos, problemas, sugestões,
                 eventos e outras informações importantes
                 para quem mora no KM4.
+
             </p>
 
         </div>
 
+
     </section>
+
 
 
     <!-- =====================
@@ -811,9 +1134,13 @@ footer strong{
 
     <section class="benefits">
 
+
         <h2 class="section-title">
+
             Por que entrar?
+
         </h2>
+
 
 
         <div class="benefit">
@@ -838,6 +1165,7 @@ footer strong{
         </div>
 
 
+
         <div class="benefit">
 
             <div class="check">
@@ -858,6 +1186,7 @@ footer strong{
             </div>
 
         </div>
+
 
 
         <div class="benefit">
@@ -882,6 +1211,7 @@ footer strong{
         </div>
 
 
+
         <div class="benefit">
 
             <div class="check">
@@ -903,7 +1233,9 @@ footer strong{
 
         </div>
 
+
     </section>
+
 
 
     <!-- =====================
@@ -912,30 +1244,46 @@ footer strong{
 
     <section class="final">
 
+
         <div class="final-box">
 
+
             <h2>
+
                 Faça parte da comunidade do KM4
+
             </h2>
 
+
             <p>
+
                 Entre gratuitamente e fique mais perto
                 do que acontece no nosso bairro.
+
             </p>
 
+
+            <!-- BOTÃO WHATSAPP -->
+
             <a
+
                 href="SEU_LINK_DA_COMUNIDADE"
+
                 target="_blank"
+
                 rel="noopener noreferrer"
+
                 class="final-button">
 
                 🟢 ENTRAR NO WHATSAPP
 
             </a>
 
+
         </div>
 
     </section>
+
 
 
     <!-- =====================
@@ -944,7 +1292,11 @@ footer strong{
 
     <footer>
 
-        <strong>@bairro.km4</strong><br>
+        <strong>
+            @bairro.km4
+        </strong>
+
+        <br>
 
         Comunidade do KM4 • Barra Mansa - RJ
 
@@ -952,6 +1304,7 @@ footer strong{
 
 
 </div>
+
 
 </body>
 </html>
